@@ -94,6 +94,8 @@ endif ()
 set(Stb_DIR ${CMAKE_CURRENT_LIST_DIR}/3rdparty/stb CACHE PATH "Path where Stb image library can be located")
 
 set(CMAKE_DEBUG_POSTFIX d)  # 给哪里加后缀???
+
+# find_package中，QUIET指的是若包没找到，禁止输出错误信息；REQUIRED指的是若包没找到，停止程序运行
 set(CMAKE_THREAD_PREFER_PTHREAD ON)  # Threads???
 find_package(Threads REQUIRED)
 if (MSVC)
